@@ -24,9 +24,13 @@ function breatheAnimation() {
 
 const timeSubmitBtn = document;
 startBtn.addEventListener("click", () => {
-    // e.preventDefault();
-    startBtn.disabled = true;
-    stopBtn.disabled = false;
+    const input = document.getElementById("totaltime").value;
+    if(isNaN(input)) {
+        alert('Please enter time in seconds');
+        return;
+    }
+	startBtn.disabled = true;
+	stopBtn.disabled = false;
 
 	totalTime = toMilliSeconds(document.getElementById("totaltime").value);
 
@@ -37,10 +41,10 @@ startBtn.addEventListener("click", () => {
 	intervalID = setInterval(breatheAnimation, totalTime);
 });
 
-stopBtn.addEventListener('click', () => {
-    startBtn.disabled = true;
-    stopBtn.disabled = false;
+stopBtn.addEventListener("click", () => {
+	startBtn.disabled = true;
+	stopBtn.disabled = false;
 	if (intervalID) {
 		clearInterval(intervalID);
 	}
-})
+});

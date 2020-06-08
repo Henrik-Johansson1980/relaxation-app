@@ -9,23 +9,28 @@
     </head>
 
     <body>
-        <h1>Relax and Breathe</h1>
 
-        <div class="container">
-            <div class="circle"></div>
-            <p id="text">Ready</p>
-            <div class="pointer-container">
-                <div class="pointer"></div>
+        <h1>Relax and Breathe</h1>
+        <div class="wrapper">
+            <div class="container">
+                <div class="circle"></div>
+                <p id="text">Ready</p>
+                <div class="pointer-container">
+                    <div class="pointer"></div>
+                </div>
+                <div class="gradient-circle"></div>
             </div>
-            <div class="gradient-circle"></div>
         </div>
         <form>
             <label for="totaltime">Enter Time in seconds</label>
-            <input id="totaltime" type="number" placeholder="7.5" value="7.5" min="1" step="0.1">
+            <input id="totaltime" type="number" placeholder="7.5" value="7.5" min="5" step="0.1">
             <button id="start-time">Start</button>
             <button id="stop-time" disabled>Stop</button>
         </form>
+        <footer>
+            <p>&copy;2020 Henrik Johansson</p>
+        </footer>
         <script src="app.js"></script>
-        <footer><p>&copy;2020 Henrik Johansson</p></footer>
     </body>
+
 </html>
